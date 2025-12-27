@@ -2,496 +2,437 @@
 <h1>🐍 Python Programming – Intermediate Python</h1>
 
 <p>
-Python is a beginner-friendly programming language used for software development,
-data analysis, and automation. This repository covers fundamental concepts and
-basic syntax to get started with Python programming.
+This section covers intermediate-level Python concepts that help improve problem-solving and coding efficiency. Here code to be write clean, optimized, and reusable code.
 </p>
 
 <hr>
 
 <h2>📌 Repository Contents</h2>
 <ul>
-  <li>Introduction to Python</li>
-  <li>Basic Syntax and Comments</li>
-  <li>Data Types and Variables</li>
-  <li>Type Conversions</li>
-  <li>Print Condition</li>
-  <li>Operators</li>
-  <li>Libraries</li>
-  <li>Functions and Built-in Functions</li>
-  <li>Strings</li>
-  <li>List</li>
-  <li>Tuple</li>
-  <li>Set</li>
-  <li>Dictionary</li>
+  <li>Control Statements</li>
+  <li>Conditional Statements</li>
+  <li>Functions</li>
+  <li>Map, Filter, Reduce</li>
+  <li>Lambda Functions</li>
+  <li>Recursion</li>
+  <li>Comprehension</li>
+  <li>File Handling</li>
 </ul>
 
 <hr>
 
-<h2>🧠 Introduction to Python</h2>
+<h2>🔁 Control Statements</h2>
 <p>
-  Python is a <b>high-level, interpreted programming language</b> known for its <b>simple syntax, readability, and versatility</b>.It was created by <b>Guido van Rossum</b>, and released in <b>1991</b>. </p>
-<p> It is widely used in software development, data analysis, machine learning, web development, automation, and scripting.
-</p>
-
-<h1>⭐ Key Features of Python</h1>
-<ul>
-  <li><b>Easy to Learn & Use</b> – Simple and readable syntax</li>
-  <li><b>Interpreted Language</b> – Code executes line by line</li>
-  <li><b>High-Level Language</b> – No manual memory management</li>
-  <li><b>Dynamically Typed</b> – No need to declare data types</li>
-  <li><b>Object-Oriented</b> – Supports OOP concepts</li>
-  <li><b>Platform Independent</b> – Runs on Windows, macOS, Linux</li>
-  <li><b>Open Source</b> – Free and community-supported</li>
-  <li><b>Rich Ecosystem</b> – Libraries for AI, ML, Web, Automation</li>
-  <li><b>Scalable & Flexible</b> – Suitable for small scripts as well as large applications</li>
-</ul>
-
-<hr>
-
-<h2>💻 Python Installation & Setup</h2>
-<ol>
-  <li>Download Python from <a href="https://www.python.org/" target="_blank">python.org</a></li>
-  <li>Install Python and add it to PATH</li>
-  <li>Verify installation:</li>
-</ol>
-
-<pre><code>python --version</code></pre>
-
-<hr>
-
-<h2>🧩 Basic Syntax</h2>
-<p>
-<ul>
-  <li>Python uses simple and readable syntax, similar to the English language.</li>
-  <li>Indentation is mandatory in Python and is used to define code blocks. where it replaces Curly braces {}. </li>
-</ul>
-</p>
-
-<pre><code>
-if 5 > 2:
-    print("Five is greater than two!")
-</code></pre>
-
-<h1>💬 Comments</h1>
-<p>Comments are used to <b>explain code</b> and are ignored by the Python interpreter. </p>
-<ul>
-  <li>Single-line comment → <code>#</code></li>
-  <li>Multi-line comment → <code>'''</code> or <code>"""</code></li>
-</ul>
-
-<pre><code>
-# This is a single-line comment
-print("Hello, Python")
-</code>
-</pre>
-
-<hr>
-
-<h2>📦 Data Types and Variables</h2>
-<p>
+<li>Control statements are used to <b>control the flow of execution</b> in a Python program. They decide <b>which code runs and how many times it runs.</b> </li>
+ <li>There are two control statements: </li>
   <ul>
-    <li>Data types in Python are the different kinds of values that tell Python what type of data a variable can store. </li>
-    <li>There are main 3 data types: </li>
-    <ul>
-      <li> Integer (int) – holds any whole number</li>
-      <li> Float (float) – holds decimal numbers </li>
-      <li> String (str) – written anything in b/w quotes ( “  ” )  </li>
-    </ul>
+    <li> For loop</li>
+    <li> While loop</li>
   </ul>
-  </p>
+</p>
+
+<h3>for Loop</h3>
+<p>The for loop is used to iterate over a sequence such as a list, tuple, string, or range. </p>
+<b> Syntax:</b>
+<pre>for variable in sequence:
+      statements </pre>
+
 
 <pre><code>
-x = 5
-print(type(x))
-</code></pre>
-
-<p><b>Variables:</b></p>
-<ul>
-  <li>Variables in Python are names used to store data values so that we can use and change them later in a program. </li>
-</ul>
-
-<pre><code>
-x = 10
-name = "Python"
-print(x)
-</code></pre>
-
-<p><b>Rules to create variables:</b></p>
-<ul>
-  <li>A variable name must <b>start with a letter (a–z, A–Z) or an underscore (_).</b> </li>
-  <li>A variable name <b>cannot start with a number. </b></li>
-  <li>A variable name can contain <b>letters, numbers, and underscores only.</b> </li>
-  <li>Variable names are <b>case-sensitive. </b></li>
-  <li><b>Keywords </b>(reserved words) , <b>Punctuations</b> cannot be used as variable names.</li>
-</ul>
-
-<hr>
-
-<h2>🔁 Type Conversions</h2>
-<ul>
-  <li>Type conversion means changing one data type into another data type.</li>
-  <li>There are two types of type conversions in Python:</li>
-</ul>
-
-<p><b>Implicit Conversion:</b> Python automatically changes one data type into another.</p>
-<pre><code>
-a = 5
-b = 2.5
-c = a + b
+for i in range(1, 6):
+    print(i)
 </code>
 </pre>
 
-<p><b>Explicit Conversion:</b>The programmer changes the data type manually using functions.</p>
-<p><b>Common conversion functions:</b></p>
-<ul>
-  <li>int() – converts to integer</li>
-  <li>float() – converts to float</li>
-  <li>str() – converts to string </li>
-</ul>
-  <pre><code>
-x = "10"
-y = int(x)
-z = float(x)
-</code></pre>
+<b>Key Points:</b>
+<li> Executes a block of code <b> for a fixed number of times</b></li>
+<li> Commonly used with range()</li>
+<li> Best when the number of iterations is known</li>
 
-<hr>
-
-<h2>🖨️ Print Condition</h2>
-<p> <ul>
-  <li>When we want to call a variable from the memory then we use print() condition. </li>
-  <li>To create the relation with str and int , str and float inside the print() condition.</li>
-  <li>We can create this in 4 different ways:</li>
-  <ul>
-    <li>Using Comma ( , ) where it will give us one tab space.</li>
-    <pre><code>
-      f = 27
-      print( ‘ My name is Ajay & My age is ‘ , f)
-    </code></pre>
-
- <li>Using “  + ” it will not give tab space and “  + ” will create the relation with string only.</li>
- <pre><code>
-    f = 27
-    print("My age is " + str(f))
-</code></pre>
- <li>Using identifiers like %d – integer , %f – float , %s – string.  </li>
- <pre><code>
-    f = 27
-    print("My age is %d" % f)
- </code></pre>
- <li>Using f and { }.</li>
- <pre><code>
-    f = 27
-    print(f"My age is {f}")
-   </code></pre>
-</ul></ul>
-</p>
-<hr>
-
-<h2>➗ Operators</h2>
-<ul>
-  <li>Arithmetic:<pre> + - * / % ** //</pre></li>
-  <li>Relational:<pre> == != > < >= <=</pre></li>
-  <li>Logical: <pre>and or not</pre></li>
-  <li>Assignment:<pre> = += -= *=</pre></li>
-  <li>Membership:<pre> in, not in</pre></li>
-</ul>
-
-<hr>
-
-<h2>📚 Libraries</h2>
-<p>Libraries in Python are collections of pre-written code that help us perform tasks easily without writing everything from scratch.</p>
-<p><b> Common Python Libraries </b></p>
-<ul>
-  <li><b>NumPy</b>– Used for working with numbers and arrays</li>
-  <li><b>Pandas</b>– Used for data analysis and handling tables</li>
-  <li><b>Matplotlib</b>– Used for creating charts and graphs</li>
-  <li><b>Seaborn</b>– Used for advanced data visualization</li>
-  <li><b>Math</b>– Used for mathematical calculations</li>
-</ul>
-
+<h3>while Loop</h3>
+<p>The while loop runs as long as a given condition is true. </p>
+<b>Syntax:</b>
+<pre>while condition:
+    statements</pre>
 <pre><code>
-import math
-print(math.sqrt(16))
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+</code></pre>
+
+<b>Key Points:</b>
+<li> Executes code <b>until the condition becomes false</b></li>
+<li> Used when the number of iterations is <b>not known in advance</b></li>
+<li> Condition must be updated to avoid infinite loops</li>
+
+<hr>
+
+<h2>🔀 Conditional Statements</h2>
+<p> 
+<li> Conditional statements are used to <b>make decisions</b> in a program based on conditions. </li>
+<li>There are four conditional statements: </li>  
+  <ul>
+    <li>If </li>
+    <li>Else </li>
+    <li>Elif</li>
+    <li>Break </li>
+  </ul>
+</p>
+
+<h3>if Statement</h3>
+<p>Executes a block of code <b>only when the condition is true.</b></p>
+<pre><code>
+age = 18
+if age >= 18:
+    print("Eligible to vote")
+</code></pre>
+
+<h3>if-else Statement</h3>
+<p>Executes one block if the condition is true, otherwise executes the else block. </p>
+<pre><code>
+num = 7
+if num % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")
+</code></pre>
+
+<h3>if-elif-else Statement</h3>
+<p> Used to check <b>multiple conditions</b></p>
+<pre><code>
+marks = 65
+if marks >= 90:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+else:
+    print("Grade C")
+</code></pre>
+
+<h3>break Statement</h3>
+<p>Used inside loops to <b>stop execution immediately</b> when a condition is met.</p>
+<pre><code>
+for i in range(1, 6):
+    if i == 4:
+        break
+    print(i)
 </code></pre>
 
 <hr>
 
-<h2>🔧 Functions</h2>
-<p>A function is a block of code that performs a specific task and can be used again and again. </p>
+<h2>🔧 Functions in Python</h2>
+<p>A function in Python is a block of reusable code that performs a specific task. Functions help make programs <b>simple, organized, and reusable.</b></p>
+<b>Syntax:</b>
+<pre>
+  def function_name(parameters):
+    statements
+</pre>
+<pre><code>
+def greet():
+    print("Hello, welcome to Python")
+greet()
+</code></pre>
+
+<h3>Function with Parameters</h3>
 <pre><code>
 def add(a, b):
-    return a + b
+    print(a + b)
+add(10, 20)
 </code></pre>
 
-<h3>Built-in Functions</h3>
+<h3>Function with Return Value</h3>
+<pre><code>
+def square(num):
+    return num * num
+print(square(5))
+</code></pre>
+
+<h3>Types of Functions</h3>
+<ul>
+  <li>Built-in Functions – print(), len(), type()</li>
+  <li>User-defined Functions - Created by the user using def</li>
+</ul>
+<pre><code>
+def kiran(a,b):
+    for i in range(a,b):
+          if  i % 2 == 0:
+                print(‘even’)
+kiran(11,16)
+</code></pre>
+
+<b>Key Points</b>
+<ul>
+  <li>Defined using the def keyword</li>
+  <li>Improves code reusability</li>
+  <li>Reduces repetition</li>
+  <li>Makes code easy to understand </li>
+  <li>Variables outside the function is known as <b>Global Variables</b></li>
+  <li>Variables inside the function is known as <b>Local Variables</b></li>
+</ul>
+
+<b>Modularization Using Functions:</b>
+<p>Extracting (Calling) the function from other file is known as <b>modularization</b></p>
+<b>Syntax:</b>
+<p> from file_name import function_name</p>
+<pre><code>
+from part_2 import kiran                             part_2 file
+print(‘I am from uk’)                                def kiran():
+def sharuk():                                            print(‘I am from usa’)
+    for i in range(1,5):
+         print(f‘good morning : {i}’)
+</code></pre>
+
+<hr>
+
+<h2>📦 Map, Filter, Reduce</h2>
+<p>Map, Filter, and Reduce are built-in functional tools used to process data in a simple and efficient way.</p>
+
+<h3>map()</h3>
+<p>The map() function applies a given function to <b>each element</b> of an iterable.</p>
+<b>Syntax:</b>
+      <pre>map(function, iterable)</pre>
+ <pre><code>
+         def fun(b):
+             if b % 2 ==0:
+                  return b
+              else:
+                  return ‘USA’
+          sol = map(fun,[10,11,12,13,14,15])
+          print(sol)
+ </code></pre>     
+
+<h3>filter()</h3>
+<p>The filter() function selects elements from an iterable <b>based on a condition.</b></p>
+<b>Syntax:</b>
+      <pre>filter(function, iterable)</pre>
+ <pre><code>   
+      def fun(b):
+          if b % 2 ==0:
+              return b          
+      sol = filter(fun,[10,11,12,13,14,15])
+      print(sol)
+ </code></pre>
+
+<h3>reduce()</h3>
+<p> The reduce() function reduces an iterable to a single value by applying a function repeatedly. Reduce() is available in the functools module.</p>
+<b>Syntax:</b>
+<pre>
+  from functools import reduce
+  reduce(function, iterable)
+</pre>
+
+<pre><code>
+from functools import reduce
+f = [1, 2, 3, 4]
+sol = reduce(lambda x,y: x+y,f)
+print(sol)
+</code></pre>
+
+<hr>
+
+<h2>⚡ Lambda Functions</h2>
 <p>
-  <li>Built-in functions are functions that are already available in Python. </li>
-  <li>We can use them directly without creating them. </li>
+<li>A lambda function is a small anonymous function (function without a name). </li>
+<li>It is used for short, simple operations.</li> 
 </p>
-<p>Common Built-in Functions </p> 
-<ul>
-  <li><b>print()</b>– Displays output</li>
-  <li><b>input()</b>– Takes input from the user</li>
-  <li><b>len()</b>– Finds length of data</li>
-  <li><b>type()</b>– Finds data type</li>
-  <li><b>sum()</b>– Adds values</li>
-  <li><b>max()</b>– Finds maximum value</li>
-  <li><b>min()</b>– Finds minimum value</li>
-</ul>
-<pre><code>                
-  x = [1, 2, 3]
-  print(len(x))
+
+<b>Syntax:</b>
+<pre>lambda arguments: expression</pre>
+
+<pre><code>
+add = lambda a, b: a + b
+print(add(5, 3))
 </code></pre>
 
-<hr>
+<h3>Lambda with map()</h3>
+<pre><code>
+numbers = [1, 2, 3, 4]
+result = list(map(lambda x: x * 2, numbers))
+print(result)
+</code></pre>
 
-<h2>🧵 Strings</h2>
-<p>
-  <li>A string in Python is used to store text or characters. </li>
-  <li>Strings are written inside single quotes (' '), double quotes (" "), or triple quotes (''' ''' or """ """). </li> </p>
+<h3>Lambda with filter()</h3>
 <pre><code>
-  name = "Python"
-  message = 'Hello World'
+numbers = [1, 2, 3, 4, 5]
+result = list(filter(lambda x: x % 2 == 0, numbers))
+print(result) 
 </code></pre>
-<p><b> Important Points About Strings</b></p>
-<ul>
-  <li>Strings are ordered (each character has a position). </li>
-  <li>Strings are immutable, which means they cannot be changed after creation.</li>
-  <li>Strings can contain letters, numbers, and symbols.</li>
-</ul>
 
-<p><b>Common String Operations </b></p>
-<li><b>Concatenation (Joining strings)</b></li>
+<h3>Lambda with reduce()</h3>
 <pre><code>
-  a = "Hello"
-  b = "Python"
-  print(a + "   " + b)    # Hello Python
+from functools import reduce
+numbers = [1, 2, 3, 4]
+result = reduce(lambda a, b: a + b, numbers)
+print(result) 
 </code></pre>
-<li><b>Length of string </b></li>
-<pre><code>
-  text = "Python"
-  print(len(text))     # 6
-</code></pre>
-<li><b>Indexing </b></li>
-<pre><code>
-  word = "Python"
-  print(word[0])    # P
-</code></pre>
-<li><b>Slicing </b></li>
-<pre><code>
- print(word[0:3])   #Pyt
-</code></pre>
-<p><b>Common String Functions</b> </p>
+
+<b>Key Points </b>
 <ul>
-  <li>upper() – Converts to uppercase </li>
-  <li>lower() – Converts to lowercase </li>
-  <li>strip() – Removes spaces</li>
-  <li>replace() – Replaces characters</li>
-  <li>split() – Splits string into parts</li>
+  <li>No def keyword</li>
+  <li>Written in one line </li>
+  <li>Can have multiple arguments but only one expression</li>
+  <li>Used for short and temporary functions</li>
 </ul>
 
 <hr>
 
-<h2>📋 List</h2>
+<h2>🔁 Recursion</h2>
 <p>
-  <li>A list in Python is a data type used to store multiple values in a single variable. </li>
-  <li> Lists are written using square brackets [ ].</li> </p>
-  <pre><code>
-    numbers = [1, 2, 3, 4]
-    names = ["Alice", "Bob", "Charlie"]
-  </code></pre>
-  
-  <p><b>Important Points About Lists </b></p>
-  <ul>
-    <li>Lists are ordered (each item has a position).</li>
-    <li>Lists are mutable, which means values can be changed.</li>
-    <li>Lists can store different data types. </li> </ul>
-  <pre><code>
-    my_list = [1, "Python", 3.5]
-  </code></pre>  
-  
-  <p><b>Common List Operations</b></p>
-  <li><b>Accessing elements</b></li>
-  <pre><code>
-  my_list = [1, "Python", 3.5]
-  print(numbers[0])          # 1
-  </code></pre>
-  <li><b>Changing elements </b></li>
-  <pre><code>
-  numbers[1] = 10 
-  </code></pre>
-  <li><b>Adding elements </b></li>
-  <pre><code>
-  numbers.append(5)
-  </code></pre>
-  <li><b>Removing elements</b></li>
-  <pre><code>
-  numbers.remove(3) 
-  </code></pre>
-  <li><b>Length of list</b></li>
-  <pre><code>
-  print(len(numbers))
-  </code></pre>
+Recursion is a process where a <b>function calls itself</b> to solve a problem by breaking it into smaller parts.
+</p>
 
-  <p><b>Common List Functions </b></p>
+<b>Recursion Works:</b>
+<ul>
+  <li>The function calls itself</li>
+  <li>Each call works on a smaller part</li>
+  <li>When the base condition is met, the function stops</li>
+  <li>The results return back step by step</li>
+</ul>
+
+<pre><code>
+def count(n):
+    if n == 0:
+        return
+    print(n)
+    count(n - 1)
+
+count(3)
+</code></pre>
+
+<b> Key Points</b>
+<ul>
+  <li>Function calls itself</li>
+  <li>Base condition is mandatory</li>
+  <li>Used to solve problems like factorial, Fibonacci, tree traversal and nested data </li>
+</ul>
+
+<hr>
+
+<h2>🧠 Comprehension</h2>
+<p> 
+<li>Comprehension is used to write the code in single line instead of multiple lines of code.
+</li>
+ <li>Mainly two types of comprehension: </li> 
   <ul>
-    <li><b>append()</b> – Adds an item</li>
-    <li><b>insert()</b> – Adds item at a position</li>
-    <li><b>remove()</b> – Removes an item</li>
-    <li><b>pop()</b> – Removes last item </li>
-    <li><b>sort()</b> – Sorts the list</li>
-    <li><b>reverse()</b> – Reverses the list</li>
+    <li>List Comprehension </li>
+    <li>Dictionary Comprehension</li>
   </ul>
-
-<hr>
-
-<h2>📌 Tuple</h2>
-<li>A tuple in Python is a data type used to store multiple values in a single variable. </li>
-<li>Tuples are written using round brackets ( ).</li>
-<pre><code>
-numbers = (1, 2, 3, 4)
-names = ("Alice", "Bob", "Charlie")
-</code></pre>
-
-<p><b>Important Points About Tuples</b></p>
-<li>Tuples are ordered (each item has a position).</li>
-<li>Tuples are immutable, which means values cannot be changed.</li>
-<li>Tuples can store different data types.</li>
-
-<p><b>Common Tuple Operations </b></p>
-<li><b>Accessing elements</b></li>
-<pre><code>
-my_tuple = (1, "Python", 3.5) 
-print(numbers[0])   # 1 
-</code></pre>
-<li><b>Length of tuple </b></li>
-<pre><code>
-print(len(numbers)) 
-</code></pre>
-<li><b>Looping through tuple</b></li>
-<pre><code>
-  for item in numbers:
-      print(item)
-</code></pre>
-
-<p><b>Uses of Tuples</b></p>
-<ul>
-  <li>Faster than lists</li>
-  <li>Used when data should not change</li>
-  <li>Keeps data safe from modification</li></ul>
-
-<hr>
-
-<h2>🔢 Set</h2>
-<li>A set in Python is a data type used to store multiple unique values in a single variable.</li>
-<li>Sets are written using curly brackets { }. </li>
-<pre><code>
-numbers = {1, 2, 3, 4}
-names = {"Alice", "Bob", "Charlie"}
-</code></pre>
-
-<p><b>Important Points About Sets</b></p>
-<ul>
-  <li>Sets store only unique values (no duplicates).</li>
-  <li>Sets are unordered (no fixed position).</li>
-  <li>Sets are mutable (can be changed).</li>
-  <li>Sets do not allow indexing.</li>
-</ul>
-
-<p><b>Common Set Operations </b></p>
-<li>Adding elements</li>
-<pre><code>
-numbers = {1, 2, 3, 4}
-numbers.add(5)
-</code></pre>
-<li><b>Removing elements</b></li>
-<pre><code>
-  numbers.remove(2)
-</code></pre>
-<li><b>Union</b></li>
-<pre><code>
-  a = {1, 2, 3}
-  b = {3, 4, 5}
-  print(a | b)
-</code></pre>
-<li><b>Intersection </b></li>
-<pre><code>
-print(a & b)
-</code></pre>
-
-<p><b>Uses of Sets</b></p>
-<ul>
-  <li>To remove duplicate values</li>
-  <li>To perform mathematical set operations</li>
-  <li>To check membership quickly</li>
-</ul>
-<hr>
-
-<h2>📖 Dictionary</h2>
-<li>A dictionary in Python is a data type used to store data in key–value pairs.</li>
-<li>Dictionaries are written using curly brackets { } with a key and value separated by a colon :. </li>
-<pre><code>
-  student = {
-             "name": "Indhira",
-              "age": 22,
-              "course": "Python"
-            }
-</code></pre>
-
-<p><b>Important Points About Dictionaries </b></p>
-<ul>
-  <li>Data is stored as key : value pairs.</li>
-  <li>Keys are unique.</li>
-  <li>Dictionaries are mutable (values can be changed).</li>
-  <li>Values can be of any data type.</li>
-</ul>
-
-<p><b>Common Dictionary Operations</b></p>
-<li><b>Accessing values</b></li>
-<pre><code>
-print(student["name"])
-</code></pre>
-<li><b>Adding or updating values</b></li>
-<pre><code> 
-student["grade"] = "A"
-</code></pre>
-<li><b>Removing values</b></li>
-<pre><code> 
-student.pop("age")
-</code></pre>
-<li><b>Getting all keys and values</b></li>
-<pre><code>
-print(student.keys())
-print(student.values())
-</code></pre>
-
-<p><b>Uses of Dictionaries</b></p>
-<ul>
-  <li>To store related data together</li>
-  <li>Fast data access using keys</li>
-  <li>Useful for structured data</li>
-</ul>
-<hr>
-
-<h2> Conclusion</h2>
-
-<p>
-This repository builds a strong foundation in Python by covering core concepts,
-syntax, and essential data structures with practical examples. It is ideal for
-beginners and freshers to develop problem-solving skills and progress toward
-advanced Python applications.
+ <li>In this comprehension we have three syntax </li> 
+ <ol>
+   <li>One for loop & one print condition </li>
+   <li>One for loop & one if condition & one print condition</li>
+   <li>One for loop & one if condition & one else condition & one print condition</li>
+ </ol>
 </p>
+
+<h3>List Comprehension</h3>
+<p><li>One for loop & one print condition</li></p>
+<b>Syntax</b>
+<pre>[ < print  area>  <for loop> ] </pre>
+<pre><code>
+Print( [ ‘good morning’  for i in range(1,4) ] ) 
+</code></pre>
+
+<p><li>One for loop & one if condition & one print condition</li></p>
+<b>Syntax</b>
+<pre>[ < print area>   <for loop>  <if condition> ] </pre>
+<pre><code>
+ Print( [ f’ even: {i}’  for i in range(11,16)  if i % 2 == 0 ] ) 
+</code></pre>
+
+<p><li>One for loop & one if condition & one else condition & one print condition</li></p>
+<b>Syntax</b>
+<pre>[ < if print>   <if condition>  <else>  <else print>   <for loop> ] </pre>
+<pre><code>
+Print( [ f’ even: {i}’    if i % 2 == 0     else   f’ odd: {i}’   for i in range(11,16) ] ) 
+</code></pre>
+
+<h3>Dictionary Comprehension</h3>
+<p><li>One for loop & one print condition</li></p>
+<b>Syntax</b>
+<pre>[ < print  area>  <for loop> ] </pre>
+<pre><code>
+fruits = { ‘ apple’ : 100 , ‘ banana ‘ : 200 , ‘ carrot ‘ : 300 }
+Print( { i : fruits[i] * 2   for i in fruits } ) 
+</code></pre>
+
+<p><li>One for loop & one if condition & one print condition</li></p>
+<b>Syntax</b>
+<pre>[ < print area>   <for loop>  <if condition> ] </pre>
+<pre><code>
+fruits = { ‘ apple’ : 100 , ‘ banana ‘ : 200 , ‘ carrot ‘ : 300 }
+Print( { i : fruits[i] * 3   for i in fruits  if fruits[i] > 150 } ) 
+</code></pre>
+
+<p><li>One for loop & one if condition & one else condition & one print condition</li></p>
+<b>Syntax</b>
+<pre>[ < if print>   <if condition>  <else>  <else print>   <for loop> ] </pre>
+<pre><code>
+fruits = { ‘ apple’ : 100 , ‘ banana ‘ : 200 , ‘ carrot ‘ : 300 }
+Print( { i : ( j * 3  if j > 150  else  j * 2 )   for i, j in fruits. items() } ) 
+</code></pre>
+
 <hr>
-<h3>Contact</h3>
 
-<p>Rongali Indhira
-<br>email: indhirarongali123@gmial.com
-<br>contact no.: +91 8096488064</p>
+<h2>📂 File Handling</h2>
+<p>
+<li>File handling is used to create, read, write, and update files in Python.</li>
+<li>It helps store data permanently. </li>
+</p>
+
+<h3>Opening a File</h3>
+<p> file = open("data.txt", "mode") </p>
+<h3>File Modes</h3>
+<ul>
+  <li> "r" → Read</li>
+  <li> "w" → Write (creates new file / overwrites existing)</li>
+  <li> "a" → Append </li>
+</ul>
+
+<h3>Reading a File</h3>
+<pre><code>
+file = open("data.txt", "r")
+print(file.read())
+print(content) 
+file.close()
+</code></pre>
+
+<h3>Writing to a File</h3>
+<pre><code>
+file = open("data.txt", "w")
+file.write("Hello Python")
+file.close()
+</code></pre>
+
+<h3>Appending to a File </h3>
+<pre><code>
+file = open("data.txt", "a")
+file.write("\n Welcome")
+file.close()
+</code></pre>
+
+<h3>Using with Statement</h3>
+<p>Automatically closes the file. </p>
+<pre><code>
+with open("data.txt", "r") as file:
+    print(file.read())
+</code></pre>
+
+<b> Key Points</b>
+<ul>
+  <li>Files are opened using open()</li>
+  <li>Always close files after use</li>
+  <li>with statement is safer and cleaner</li>
+</ul>
+
 <hr>
 
+<h2>✅ Conclusion</h2>
+<p>
+This repository strengthens intermediate Python concepts such as control flow,
+functions, functional programming, recursion, comprehensions, and file handling.
+It helps learners write efficient, readable, and reusable Python programs.
+</p>
 
-
-
-
-
+<p><b>Happy Coding! 🚀</b></p>
